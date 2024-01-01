@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hirohirosns</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <ul class="header-menus">
+        <li>
+          <%= link_to("新規投稿","/posts/new") %>
+        </li>
+      </ul>    
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
