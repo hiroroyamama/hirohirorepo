@@ -12,4 +12,8 @@ class PostsController < ApplicationController
     @post.save
     redirect_to("/posts/index")
   end
+  def lshoe
+    @id = params[:id]
+  end
 end
+#15,16行目は仮
