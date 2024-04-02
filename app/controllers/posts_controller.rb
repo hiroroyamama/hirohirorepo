@@ -13,7 +13,8 @@ class PostsController < ApplicationController
     redirect_to("/posts/index")
   end
   def lshoe
+    @lposts = Lpost.all
     @id = params[:id]
   end
 end
-#15,16行目は仮
+#15,16、１７行目は仮
