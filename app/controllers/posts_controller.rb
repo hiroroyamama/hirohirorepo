@@ -16,5 +16,7 @@ class PostsController < ApplicationController
     @lposts = Lpost.all
     @id = params[:id]
   end
+  def lposts
+  end
 end
-#15,16、１７行目は仮
+#15,16、１７行目は仮、１９、２０も仮

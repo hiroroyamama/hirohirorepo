@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "show/id" => "show#lshow"
   get '/' => 'home#top'
   get 'about' => 'home#about'
-  get "lposts" => "lposts"
+  get "posts/lposts" => "posts#lposts"
 #六行目は仮
 #九行目は仮
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
