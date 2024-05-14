@@ -12,9 +12,4 @@ class PostsController < ApplicationController
     @post.save
     redirect_to("/posts/index")
   end
-  def lshoe
-    @lposts = Lpost.all
-    @id = params[:id]
-  end
 end
-#15,16、１７行目は仮、lpostsコントローラーを作った方がいいかも
