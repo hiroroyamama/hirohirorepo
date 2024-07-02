@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all.order(created_at: :desc)
+    @posts = Post.order(content: :desc)
   end
   def show
     @post = Post.find_by(id: params[:id])
@@ -12,4 +12,10 @@ class PostsController < ApplicationController
     @post.save
     redirect_to("/posts/index")
   end
+  def took
+    @post = Post.new(coment: params[:coment])
+    @post.save
+    redirect_to("/posts/show")
+  end
 end
+#15-19行目は仮

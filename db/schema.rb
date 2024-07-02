@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_03_22_062121) do
+ActiveRecord::Schema.define(version: 2024_06_24_110950) do
 
   create_table "lposts", force: :cascade do |t|
     t.text "lcontent"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2024_03_22_062121) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "coment"
   end
 
 end

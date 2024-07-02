@@ -2,17 +2,13 @@
   <div class="post-show-item">
     <%= @post.content %>
     <div class="post-time">
-      <% @post.created_at %>
+      <%= @post.created_at %>
     </div>  
   </div>
-  <%= form_tag("/lposts/hako") do %>
-    <textarea name="lcontent"></textarea>
-    <input type="submit" value="投稿">
-    <p>lcontent</p>
-  <% end %>  
-  <%
-    comecomes = [
-    ]
-  %>  
+  <%= form_tag("/posts/took") do %>
+    <textarea name="took"></textarea>
+    <input type="submit" value="投稿"> 
+  <% end %>
+  <%= @post.coment %> 
 </div>  
 #8-16行目は仮
