@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   end
   def show
     @post = Post.find_by(id: params[:id])
+    @lposts = Lpost.all.order(created_at: :desc)
   end
   def new
   end
@@ -13,9 +14,9 @@ class PostsController < ApplicationController
     redirect_to("/posts/index")
   end
   def took
-    @post = Post.new(coment: params[:coment])
-    @post.save
+    @lpost = Lpost.new(lcontent: params[:lcontent])
+    @lpost.save
     redirect_to("/posts/show")
   end
 end
-#15-19行目は仮
+#15-19行目は仮.６、7行目も仮です

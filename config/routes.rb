@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   get "posts/:id" => "posts#show"
   post "posts/create" => "posts#create"
   post "posts/took" => "posts#took"
-  get "show/id" => "show#lshow"
   get '/' => 'home#top'
   get 'about' => 'home#about'
+  get "index" => "posts#index"
 #10行目は仮
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

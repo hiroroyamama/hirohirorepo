@@ -6,9 +6,13 @@
     </div>  
   </div>
   <%= form_tag("/posts/took") do %>
-    <textarea name="took"></textarea>
+    <textarea name="lcontent"></textarea>
     <input type="submit" value="投稿"> 
-  <% end %>
-  <%= @post.coment %> 
+  <% end %>  
+  <% @lposts.each do |lpost| %>
+    <div class="posts-coment-item">
+      <%= lpost.lcontent %>
+    </div>
+  <% end %>  
 </div>  
 #8-16行目は仮
