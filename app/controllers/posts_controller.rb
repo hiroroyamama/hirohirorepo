@@ -3,7 +3,8 @@ class PostsController < ApplicationController
     @posts = Post.order(content: :desc)
   end
   def show
-    @post = Post.find_by(id: params[:id])
+    @post = Post.find_by(id:params[:id])
+    @id = params[:id]
     @lposts = Lpost.all.order(created_at: :desc)
   end
   def new
@@ -19,4 +20,4 @@ class PostsController < ApplicationController
     redirect_to("/posts/show")
   end
 end
-#15-19行目は仮.６、7行目も仮です
+#15-19行目は仮.６、7行目も仮です.コントローラーのif文の書き方を調べる

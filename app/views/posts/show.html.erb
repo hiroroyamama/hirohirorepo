@@ -1,11 +1,13 @@
 <div class="container">
   <div class="post-show-item">
     <%= @post.content %>
+    <%= @id %>
     <div class="post-time">
       <%= @post.created_at %>
     </div>  
   </div>
   <%= form_tag("/posts/took") do %>
+    <%= hidden_field :id, value: @id %>
     <textarea name="lcontent"></textarea>
     <input type="submit" value="投稿"> 
   <% end %>  
@@ -13,6 +15,6 @@
     <div class="posts-coment-item">
       <%= lpost.lcontent %>
     </div>
-  <% end %>  
+  <% end %> 
 </div>  
-#8-16行目は仮
+#8-16行目は仮,10行目は仮
