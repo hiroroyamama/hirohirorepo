@@ -17,7 +17,7 @@ class PostsController < ApplicationController
   def took
     @lpost = Lpost.new(lcontent: params[:lcontent])
     @lpost.save
-    redirect_to("/posts/show")
+    redirect_to request.referer
   end
 end
 #15-19行目は仮.６、7行目も仮です.コントローラーのif文の書き方を調べる
