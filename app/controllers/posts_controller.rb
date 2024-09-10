@@ -17,6 +17,8 @@ class PostsController < ApplicationController
   def took
     @lpost = Lpost.new(lcontent: params[:lcontent])
     @lpost.save
+    @lpost = Lpost.new(posts_id: params[:posts_id])
+    @lpost.save
     redirect_to request.referer
   end
 end
