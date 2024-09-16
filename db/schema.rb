@@ -10,12 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_11_20_111923) do
+ActiveRecord::Schema.define(version: 2024_06_24_110950) do
+
+  create_table "lposts", force: :cascade do |t|
+    t.text "lcontent"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "coment"
   end
 
 end

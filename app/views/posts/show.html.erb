@@ -1,8 +1,20 @@
 <div class="container">
   <div class="post-show-item">
-    <p><%= @post.content %></p>
+    <%= @post.content %>
+    <%= @id %>
     <div class="post-time">
-      <% @post.created_at %>
+      <%= @post.created_at %>
     </div>  
   </div>
+  <%= form_tag("/posts/took") do %>
+    <textarea name="lcontent"></textarea>
+    <input type="hidden" name="posts_id" value="@id">
+    <input type="submit" value="投稿"> 
+  <% end %>  
+  <% @lposts.each do |lpost| %>
+    <div class="posts-coment-item">
+      <%= lpost.lcontent %>
+    </div>
+  <% end %> 
 </div>  
+#11行目は仮,

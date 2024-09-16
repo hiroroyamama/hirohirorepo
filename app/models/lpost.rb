@@ -1,0 +1,2 @@
+class Lpost < ApplicationRecord
+end
