@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_06_24_110950) do
+ActiveRecord::Schema.define(version: 2024_10_15_043631) do
 
   create_table "lposts", force: :cascade do |t|
     t.text "lcontent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "posts_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -23,6 +24,7 @@ ActiveRecord::Schema.define(version: 2024_06_24_110950) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "coment"
+    t.integer "theread_id"
   end
 
 end

@@ -15,9 +15,8 @@ class PostsController < ApplicationController
     redirect_to("/posts/index")
   end
   def took
-    @lpost = Lpost.new(lcontent: params[:lcontent])
-    @lpost.save
-    @lpost = Lpost.new(posts_id: params[:posts_id])
+    @lpost = Lpost.new(lcontent: params[:lcontent],
+             post_id: @current_post.id)
     @lpost.save
     redirect_to request.referer
   end
